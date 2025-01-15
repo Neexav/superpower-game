@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superpower Battle Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1e1e1e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #ff5722;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            border: 2px solid #ff5722;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff784e;
+        }
+
+        .attack-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .attack-item {
+            margin: 10px;
+            padding: 10px;
+            background-color: #444;
+            border: 1px solid #ff5722;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .attack-item:hover {
+            background-color: #555;
+        }
+
+        .status {
+            margin: 20px 0;
+        }
+
+        .health-bar {
+            height: 20px;
+            background-color: #555;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .health-bar-inner {
+            height: 100%;
+            background-color: #ff5722;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Superpower Battle Game</h1>
+    <div class="container">
+        <div class="status">
+            <h3>Player HP: <span id="player-hp">150</span></h3>
+            <div class="health-bar">
+                <div id="player-health-bar" class="health-bar-inner"></div>
+            </div>
+            <h3>Computer HP: <span id="computer-hp">150</span></h3>
+            <div class="health-bar">
+                <div id="computer-health-bar" class="health-bar-inner"></div>
+            </div>
+        </div>
+
+        <h3>Your Attacks</h3>
+        <div id="attack-list" class="attack-list"></div>
+        <button id="reset-game">Reset Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
